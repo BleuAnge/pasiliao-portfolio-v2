@@ -1,0 +1,19 @@
+@tailwind components;
+
+@layer components {
+    .content-container, .content-area {
+        @apply h-screen
+    }
+
+    .content-container {
+        @apply snap-y snap-proximity overflow-y-scroll overflow-x-hidden
+    }
+
+    .content-container::-webkit-scrollbar {
+        @apply hidden
+    }
+
+    .content-area {
+        @apply snap-start w-screen flex items-center justify-center text-8xl
+    }
+}
