@@ -42,7 +42,7 @@ export default function WavyText({ text } : any){
                     if(word != " "){
                         return (
                             <motion.span    variants={childe}
-                                            className="mr-4 text-sm"
+                                            className="mr-2 xs:text-xs lg:text-xl"
                                             key={index}>
                                 {word == " " ? "" : word}
                             </motion.span>

@@ -36,12 +36,13 @@ export default function WavyLetters({ text } : any){
         <motion.div variants={container}
                     initial="hidden"
                     whileInView="visible"
-                    className="overflow-hidden flex justify-center font-md">
+                    className="overflow-hidden flex justify-center">
             {
                 letters.map((letter : any , index : number) => {
                     return (
                         <motion.span    variants={childe}
-                                        key={index}>      
+                                        key={index}
+                                        className="xs:text-5xl lg:text-9xl">      
                             {letter == " " ? "\u00A0" : letter}
                         </motion.span>
                     )
