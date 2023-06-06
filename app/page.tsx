@@ -23,7 +23,7 @@ export default function Home() {
 
     updateCurrentSection(sectionNumber)
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth', block: "end", inline: "nearest" });
     }
   }
 
@@ -58,7 +58,11 @@ export default function Home() {
         {
           content.map((item , index) => {
             return(
-              <div className="content-area" id={`section-${index}`} onMouseEnter={() => setCurrentSection((prev) => (prev = index))}>
+              <div  className="content-area" id={`section-${index}`} 
+                    onMouseEnter={() => {
+                      setCurrentSection((prev) => (prev = index))
+                      handleClickScroll(index)
+                    }}>
                 {item}
               </div>
             )
